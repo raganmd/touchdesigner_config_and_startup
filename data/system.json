@@ -1,0 +1,102 @@
+{ 
+	"calibrator" : {
+		"local_ID" : "asteroid" ,
+		"ip_address" :"",
+		"media_path" : "c:\\" , 
+		"role" : "calibrator" ,
+		"tox" : "container_output/container_calibrator/container_calibrator.tox" ,
+		"group" : { 
+			"master_control" : [ 
+				"control_display01"
+			]
+		} 
+	} ,
+	"controller_primary" : {
+		"local_ID" : "asteroid" ,
+		"ip_address" :"",
+		"media_path" : "d:\\" , 
+		"role" : "controller" ,
+		"tox" : "container_output/container_controller/container_controller.tox" , 
+		"group" : { 
+			"master_control" : [ 
+				"control_display01"
+			]
+		} 
+	} ,
+	"01_node_primary" : {
+		"local_ID" : "asteroid" ,
+		"ip_address" :"", 
+		"media_path" : "e:\\" , 
+		"role" : "node" ,
+		"tox" : "container_output/container_node/container_node.tox" ,
+		"group" : { 
+			"west" : [
+				"projector001" ,
+				"projector002"   
+			],
+			"north" : [
+				"projector003"
+			]
+		}
+	},
+	"02_node_primary" : {
+		"local_ID" : "asteroid" ,
+		"ip_address" :"",
+		"media_path" : "e:\\" , 
+		"role" : "node" ,
+		"tox" : "container_output/container_node/container_node.tox" ,
+		"group" : { 
+			"west" : [
+				"projector001" ,
+				"projector002"   
+			],
+			"north" : [
+				"projector003"
+			]
+		}
+	},
+	"controller_backup" : {
+		"local_ID" : "asteroid" ,
+		"ip_address" :"",
+		"media_path" : "d:\\" , 
+		"role" : "controller" ,
+		"tox" : "container_output/container_controller/container_controller.tox" , 
+		"group" : { 
+			"master_control" : [ 
+				"control_display01"
+			]
+		} 
+	} ,
+	"01_node_backup" : {
+		"local_ID" : "asteroid" ,
+		"ip_address" :"", 
+		"media_path" : "e:\\" , 
+		"role" : "node" ,
+		"tox" : "container_output/container_node/container_node.tox" ,
+		"group" : { 
+			"west" : [
+				"projector001" ,
+				"projector002"   
+			],
+			"north" : [
+				"projector003"
+			]
+		}
+	},
+	"02_node_backup" : {
+		"local_ID" : "asteroid" ,
+		"ip_address" :"",
+		"media_path" : "e:\\" , 
+		"role" : "node" ,
+		"tox" : "container_output/container_node/container_node.tox" ,
+		"group" : { 
+			"west" : [
+				"projector001" ,
+				"projector002"   
+			],
+			"north" : [
+				"projector003"
+			]
+		}
+	}
+}
