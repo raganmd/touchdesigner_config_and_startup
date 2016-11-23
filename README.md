@@ -1,0 +1,1 @@
+# touchdesigner_config_and_startup
