@@ -1,8 +1,12 @@
 import socket
 import json
+import os
 
-target_file	= project.folder + '/{file}'
-project		= op.Project1
+target_file		= project.folder + '/{file}'
+missing_file	= '''{file_name} is missing
+Check your project directory to make sure 
+you have all the appropriate files'''
+project			= op.Project1
 
 class Config:
 	
@@ -28,12 +32,20 @@ class Config:
 
 	def Load( self, target_file ):
 
-		# format a path and read the file
-		target		= open( target_file.format( target_file ), 'r' )
-		contents 	= target.read()
+		contents = None
 
-		# close file
-		target.close()
+		if os.path.isfile( target_file ):
+			
+			# format a path and read the file
+			target		= open( target_file.format( target_file ), 'r' )
+			contents 	= target.read()
+
+			# close file
+			target.close()
+
+		else:
+		 	error_msg	= missing_file.format( file_name = target_file )
+		 	print( error_msg )
 
 		return contents
 
