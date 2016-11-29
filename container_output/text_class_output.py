@@ -1,14 +1,37 @@
+# Author Matthew Ragan
+
 project			= op.Project1
 choose_config	= op( 'container_choose_config' )
 
 class Output:
-	
-	def __init__( self ):
+	'''
 
+	Arguments
+	----------
+
+	Notes
+	----------
+	'''
+	def __init__( self ):
+		'''
+
+		Arguments
+		----------
+
+		Notes
+		----------
+		'''
 		return
 
 	def Touch_init( self, guest ):
-		
+		'''
+
+		Arguments
+		----------
+
+		Notes
+		----------
+		'''		
 		if guest:
 			choose_config.par.display	= 1
 
@@ -19,7 +42,14 @@ class Output:
 		return
 
 	def Delete_old_ops( self ):
-		
+		'''
+
+		Arguments
+		----------
+
+		Notes
+		----------
+		'''		
 		old_ops				= parent().findChildren( type = containerCOMP, depth = 1 )
 		
 		for each_op in old_ops:
@@ -31,7 +61,14 @@ class Output:
 		return
 
 	def Create_new_ops( self ):
-		
+		'''
+
+		Arguments
+		----------
+
+		Notes
+		----------
+		'''		
 		local_config					= project.fetch( 'local_config' )
 
 		new_op							= parent().create( containerCOMP, 'container_' + local_config[ 'role' ] )
@@ -42,7 +79,14 @@ class Output:
 		return
 
 	def Guest_set_up( self, role, tox ):
+		'''
 
+		Arguments
+		----------
+
+		Notes
+		----------
+		'''
 		project.unstore( 'local_config' )
 
 		local_config = {}
